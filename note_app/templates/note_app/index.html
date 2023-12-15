@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+<div class="container" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #E26EE5;">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">{{username}}</a>
+            </li>
+          </ul>
+          <div class="form-inline my-2 my-lg-0">
+            <button id="add-note" class="btn btn-outline-success my-2 my-sm-0" type="button"><i class="fa-solid fa-plus"></i> Create Note</button>
+          </div>
+        </div>
+    </nav>
+
+    <!-- <div class="note">
+        <div class="tools">
+            <button class="edit">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button class="delete">
+                <i class="fa-solid fa-trash-can"></i>
+            </button>
+        </div>
+        <div class="main">
+
+        </div>
+        <textarea></textarea>
+    </div> -->
+</div>
+
+<div class="container" id="notes">
+  {% csrf_token %}  
+
+
+</div>
+
+{% endblock content %}
+
+
+{% block script %}
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="{% static 'assets/js/script.js' %}" ></script>
+{% endblock script %}
