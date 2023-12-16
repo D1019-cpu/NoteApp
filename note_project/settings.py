@@ -27,14 +27,14 @@ SECRET_KEY = 'django-insecure-6^b21vl3&=m7-*1cz2vi8$9d-=@=1pl7!$%0h(%$j9egqa)xzo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://noteapp-92ci.onrender.com"]
 
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-CSRF_TRUSTED_ORIGINS = ["https://ecom-web-tql5.onrender.com", "ecom-web-tql5.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://noteapp-92ci.onrender.com"]
 
 # Application definition
 
